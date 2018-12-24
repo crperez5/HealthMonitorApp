@@ -41,6 +41,6 @@ release_job:
   artifacts:
     name: "project-$CI_COMMIT_REF_NAME"
     paths:
-      - dist/
+      - client/dist/
   only:
     - tags
