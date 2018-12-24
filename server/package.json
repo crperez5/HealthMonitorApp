@@ -5,6 +5,10 @@
   "scripts": {
     "start": "concurrently --kill-others \"node app.js 9000 ImportService 543a4849f7201da7bed297b279b7b1e9a086a255\" \"node app.js 9001 SchedulingService 543a4849f7201da7bed297b279b7b1e9a086a255\" \"node app.js 9002 ReconciliationService 543a4849f7201da7bed297b279b7b1e9a086a255\" \"node app.js 9004 RESTAPI 543a4849f7201da7bed297b279b7b1e9a086a255\""
   },
+  "engines": {
+    "node": "8.*",
+    "npm": ">=6.0.0"
+  },
   "dependencies": {
     "@godaddy/terminus": "^4.1.0",
     "concurrently": "^4.1.0",
