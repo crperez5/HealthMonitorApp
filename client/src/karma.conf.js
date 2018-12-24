@@ -24,8 +24,15 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false
+    autoWatch: false,
+    browsers: ['Chrome_no_sandbox'],
+    customLaunchers: {
+      Chrome_no_sandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
+    concurrency: Infinity,
+    singleRun: true
   });
 };
