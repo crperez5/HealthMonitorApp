@@ -9,15 +9,19 @@ stages:
   - test
   - build
 
-install_dependencies_job:
+install dependencies:
   stage: test
   script: cd client && npm install --silent
   
-job 1:
+check status:
+  stage: test
+  script: dir
+  
+unit tests:
   stage: test
   script: node_modules/.bin/ng test
 
-job 3:
+e2e tests:
   stage: test
   script: node_modules/.bin/ng e2e
 
