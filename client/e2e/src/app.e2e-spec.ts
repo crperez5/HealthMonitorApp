@@ -1,11 +1,10 @@
 import { browser, by, element } from 'protractor';
-var originalTimeout;
-beforeEach(function() {
-  originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-  jasmine.DEFAULT_TIMEOUT_INTERVAL = 90000;
+
+beforeEach(function () {
+  browser.ignoreSynchronization = true;
 });
-afterEach(function() {
-  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+afterEach(function () {
+  browser.ignoreSynchronization = false;
 });
 
 describe('workspace-project App', function() {
