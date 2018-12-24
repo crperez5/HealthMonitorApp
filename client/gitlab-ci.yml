@@ -84,7 +84,7 @@ deploy:production:
     dependencies:
       - release:build
     script:
-      - dir
+      - cd client/dist/health-check-client
       - echo $GAE_KEY_FILE > gae_auth.json
       - ./google-cloud-sdk/bin/gcloud auth activate-service-account --key-file gae_auth.json
       - ./google-cloud-sdk/bin/gcloud app deploy --project=$GAE_PROJECT_ID
