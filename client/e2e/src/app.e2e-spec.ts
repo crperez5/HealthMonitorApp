@@ -7,9 +7,10 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display welcome message', (done) => {
     page.navigateTo().then(() => {
       expect(page.getTitleText()).toEqual('ILO Status in Localhost');
+      done();
     })
   });
 });
