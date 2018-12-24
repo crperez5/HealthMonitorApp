@@ -74,9 +74,10 @@ release:build:
     
 release:build-server:
   before_script:
-    - cd server
+
   stage: build
   script: 
+    - cd server
   artifacts:
     name: "project-server-$CI_COMMIT_REF_NAME"
     paths:
