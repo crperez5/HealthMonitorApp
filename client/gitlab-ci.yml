@@ -1,4 +1,4 @@
-image: weltn24/up-docker-node-chrome-headless
+image: node:chakracore-10.13
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
