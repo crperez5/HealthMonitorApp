@@ -62,8 +62,9 @@ release:build:
     - npm install --silent --unsafe-perm -g @angular/cli
     - npm install --silent
     - node ./node_modules/.bin/webdriver-manager update
+    - node_modules/.bin/ng build --prod --aot
   stage: build
-  script: node_modules/.bin/ng build --prod --aot
+  script: cp app.yaml dist
   artifacts:
     name: "project-$CI_COMMIT_REF_NAME"
     paths:
