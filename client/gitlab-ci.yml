@@ -76,7 +76,7 @@ stages:
     # - tags
     
 release:build-server:
-  stage: deploy-server
+  stage: build-server
   script: 
     - cd server
   artifacts:
