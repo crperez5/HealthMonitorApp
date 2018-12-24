@@ -1,0 +1,12 @@
+{
+  "Localhost": [
+      "http://localhost:9000/healthcheck",
+      "http://localhost:9001/healthcheck",
+      "http://localhost:9002/healthcheck",
+      "http://localhost:9004/healthcheck"
+  ],
+  "Integration": [
+      
+  ]
+}
+ 

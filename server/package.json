@@ -1,0 +1,16 @@
+{
+  "name": "hc-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others \"node app.js 9000 ImportService 543a4849f7201da7bed297b279b7b1e9a086a255\" \"node app.js 9001 SchedulingService 543a4849f7201da7bed297b279b7b1e9a086a255\" \"node app.js 9002 ReconciliationService 543a4849f7201da7bed297b279b7b1e9a086a255\" \"node app.js 9004 RESTAPI 543a4849f7201da7bed297b279b7b1e9a086a255\""
+  },
+  "dependencies": {
+    "@godaddy/terminus": "^4.1.0",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2"
+  }
+}

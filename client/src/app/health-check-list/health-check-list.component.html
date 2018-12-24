@@ -1,0 +1,31 @@
+
+  
+  <table class="table health-check-table">
+    <thead>
+      <tr>
+        <th scope="col">URL</th>
+        <th scope="col">Component</th>
+        <th scope="col">Version</th>
+        <th scope="col">Status</th>
+        <th scope="col">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of results">
+            <td>{{result.url}}</td>
+            <td>{{result.component}}</td>
+            <td>{{result.version}}</td>
+            <td>
+                <span class="badge" [ngClass]="{'badge-success' : result.status == 'ONLINE', 'badge-danger' : result.status == 'BROKEN'}">{{result.status}}</span>
+            </td>
+            <td>
+              <div *ngFor="let error of result.details">
+                <span class="health-check-type">{{error.name}}</span>: {{error.message}}
+              </div>
+            </td>
+        </tr>      
+    </tbody>
+  </table>
+
+
+
