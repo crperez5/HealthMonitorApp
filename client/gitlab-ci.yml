@@ -8,7 +8,9 @@ cache:
 stages:
   - test
   - build
+  - build-server
   - deploy
+  - deploy-server
  
 # job:test:
   # before_script:
