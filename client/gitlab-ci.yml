@@ -73,7 +73,7 @@ release:build:
     - tags
     
 release:build-server:
-  stage: build
+  stage: build-server
   script: 
     - cd server
   artifacts:
@@ -105,7 +105,7 @@ deploy:production:
       - tags
       
 deploy:production-server:
-    stage: deploy
+    stage: deploy-server
     environment:
       name: production
       url: http://demo-app.com
