@@ -1,5 +1,5 @@
 # [START runtime]
-runtime: nodejs
+runtime: nodejs8
 handlers:
 - url: /
   static_files: dist/health-check-client/index.html
