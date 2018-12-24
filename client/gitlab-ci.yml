@@ -5,20 +5,23 @@ cache:
   paths:
     - node_modules/
 
-before_script:
-  - cd client;npm install 
-
 stages:
   - test
   - build
  
-job 1:
+run unit tests:
   stage: test
-  script: cd client;node_modules/.bin/ng test
+    before_script:
+    - cd client
+    - npm install
+  script: node_modules/.bin/ng test
 
-job 2:
+run e2e tests:
   stage: test
-  script: cd client;node_modules/.bin/ng e2e
+  before_script:
+    - cd client
+    - npm install
+  script: node_modules/.bin/ng e2e
 
 release_job:
   stage: build
