@@ -6,11 +6,11 @@ cache:
     - node_modules/
 
 stages:
+  - deploy-server
   - test
   - build
-  - build-server
   - deploy
-  - deploy-server
+
  
 # job:test:
   # before_script:
@@ -74,8 +74,8 @@ release:build:
   only:
     - tags
     
-release:build-server:
-  stage: build-server
+release:build:
+  stage: deploy-server
   script: 
     - cd server
   artifacts:
@@ -106,7 +106,7 @@ deploy:production:
     only:
       - tags
       
-deploy:production-server:
+deploy:production:
     stage: deploy-server
     environment:
       name: production
@@ -117,6 +117,7 @@ deploy:production-server:
       - ./google-cloud-sdk/install.sh
       - echo $GAE_KEY_FILE_SERVER > gae_auth.json
       - cd server
+      - dir
     dependencies:
       - release:build-server
     script:
