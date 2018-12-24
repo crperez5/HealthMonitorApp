@@ -20,10 +20,8 @@ before_script:
     # Install AngularJS CLI exclusively
     # Add --unsafe-perm to resolve problems with node-gyp infinite loop on Docker
     - cd client
-    - npm install --silent --unsafe-perm -g @angular/cli@1.1.2
-    # Install remaining project dependencies
+    - npm install --silent --unsafe-perm -g @angular/cli
     - npm install --silent
-    # Download Selenium server JAR, drivers for Chrome
     - node ./node_modules/.bin/webdriver-manager update
 stages:
   - test
