@@ -73,8 +73,6 @@ release:build:
     - tags
     
 release:build-server:
-  before_script:
-
   stage: build
   script: 
     - cd server
