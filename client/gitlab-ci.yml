@@ -13,19 +13,19 @@ stages:
   - test
   - build
 
-scope to client:
+job 1:
   stage: test
   script: cd client
   
-job 1:
+job 2:
   stage: test
   script: node_modules/.bin/ng test
 
-job 2:
+job 3:
   stage: test
   script: node_modules/.bin/ng e2e
 
-scope to client:
+job 4:
   stage: build
   script: cd client
   
