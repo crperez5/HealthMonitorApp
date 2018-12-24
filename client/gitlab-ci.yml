@@ -64,7 +64,7 @@ release:build:
     - node ./node_modules/.bin/webdriver-manager update
     - node_modules/.bin/ng build --prod --aot
   stage: build
-  script: cp app.yaml dist
+  script: cp app.yaml dist/health-check-client
   artifacts:
     name: "project-$CI_COMMIT_REF_NAME"
     paths:
