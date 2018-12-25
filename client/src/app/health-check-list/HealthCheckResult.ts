@@ -4,6 +4,9 @@ export class HealthCheckResult {
     component: string;
     version: string;
     details: ErrorDetail[];
+    
+    static ONLINE: string = 'ONLINE';
+    static BROKEN: string = 'BROKEN';
 
     constructor(url, component, version, status, details) {
         this.url = url;
@@ -13,8 +16,12 @@ export class HealthCheckResult {
         this.details = details;
     }
 
+    public IsOnline() : boolean {
+        return this.status === HealthCheckResult.ONLINE
+    }
+
     public static CreateDefault(): HealthCheckResult {
-        return new HealthCheckResult('', '', '', '', []);
+        return new HealthCheckResult('', '', '', HealthCheckResult.ONLINE, []);
     }
  }
 

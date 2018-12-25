@@ -10,7 +10,7 @@ afterEach(function () {
 describe('workspace-project App', function() {
   it('should display welcome message', async function() {
     await browser.get('/');
-    let text = await element(by.css('app-root h1')).getText();
-    expect(text).toEqual('ILO Status in Production');
+    let text = await element(by.css('button')).getText();
+    expect(text).toEqual('Production');
   });
 });

@@ -2,8 +2,6 @@
   <app-health-check-env-dropdown (environmentChanged)="onEnvironmentChange($event)" [environments]="environments" [selectedEnvironment]="selectedEnvironment"></app-health-check-env-dropdown>
 
 <div style="text-align:center">
-  <h1>
-    ILO Status in {{selectedEnvironment}}
-  </h1>
+  <app-health-check-live-chart [urls]="urls"></app-health-check-live-chart>
   <app-health-check-list [urls]="urls"></app-health-check-list>
 </div>

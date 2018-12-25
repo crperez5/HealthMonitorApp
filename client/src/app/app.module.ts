@@ -6,13 +6,15 @@ import { HealthCheckListComponent } from './health-check-list/health-check-list.
 import { HealthCheckEnvDropdownComponent } from './health-check-env-dropdown/health-check-env-dropdown.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HealthCheckEnvPipePipe } from './health-check-env-pipe.pipe';
+import { HealthCheckLiveChartComponent } from './health-check-live-chart/health-check-live-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HealthCheckListComponent,
     HealthCheckEnvDropdownComponent,
-    HealthCheckEnvPipePipe
+    HealthCheckEnvPipePipe,
+    HealthCheckLiveChartComponent
   ],
   imports: [
     BrowserModule,
