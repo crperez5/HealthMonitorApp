@@ -76,7 +76,7 @@ deploy:production:
       name: production
       url: http://demo-app.com
     before_script:
-      - cd client/dist
+      - cd client/
       - wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-218.0.0-linux-x86.tar.gz
       - tar -xzf  google-cloud-sdk-218.0.0-linux-x86.tar.gz
       - ./google-cloud-sdk/install.sh
