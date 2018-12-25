@@ -1,11 +1,11 @@
 import { browser, by, element } from 'protractor';
 
-// beforeEach(function () {
-//   browser.ignoreSynchronization = true;
-// });
-// afterEach(function () {
-//   browser.ignoreSynchronization = false;
-// });
+beforeEach(function () {
+  browser.ignoreSynchronization = true;
+});
+afterEach(function () {
+  browser.ignoreSynchronization = false;
+});
 
 describe('workspace-project App', function() {
   it('should display welcome message', async function() {
