@@ -5,13 +5,14 @@ import { HealthCheckListComponent } from './health-check-list/health-check-list.
 import { HealthCheckEnvPipePipe } from './health-check-env-pipe.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { HealthCheckLiveChartComponent } from './health-check-live-chart/health-check-live-chart.component'
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
         HealthCheckEnvDropdownComponent,
+        HealthCheckLiveChartComponent,
         HealthCheckListComponent,
         HealthCheckEnvPipePipe
       ],
@@ -29,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('ILO Status in Localhost');
+    expect(compiled.querySelector('button').textContent).toContain('Localhost');
   });
 });

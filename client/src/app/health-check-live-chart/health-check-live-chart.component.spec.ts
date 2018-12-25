@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HealthCheckLiveChartComponent } from './health-check-live-chart.component';
 
@@ -8,7 +9,8 @@ describe('HealthCheckLiveChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HealthCheckLiveChartComponent ]
+      declarations: [ HealthCheckLiveChartComponent ],
+      imports: [ HttpClientModule ]
     })
     .compileComponents();
   }));
