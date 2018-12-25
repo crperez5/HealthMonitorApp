@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js 80 TestService 543a4849f7201da7bed297b279b7b1e9a086a255"
+    "start": "node app.js 8080 TestService 543a4849f7201da7bed297b279b7b1e9a086a255"
   },
   "engines": {
     "node": "8.*",
